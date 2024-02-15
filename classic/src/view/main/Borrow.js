@@ -1,9 +1,6 @@
 Ext.define("nfufront1.view.main.Borrow", {
   extend: "Ext.panel.Panel",
-  requires: [
-    "nfufront1.view.main.BorrowController",
-    "nfufront1.view.main.ScheduleController",
-  ],
+  requires: ["nfufront1.view.main.BorrowController"],
   alias: "widget.borrow",
   controller: "borrow",
   title: "borrow_layout",
@@ -21,7 +18,6 @@ Ext.define("nfufront1.view.main.Borrow", {
   },
   items: [
     {
-      xtype: "panel",
       bodyPadding: 10,
       title: "教室借用",
       style: {
@@ -33,7 +29,6 @@ Ext.define("nfufront1.view.main.Borrow", {
       items: [
         {
           xtype: "container",
-
           style: {
             borderRadius: "0.5rem",
           },

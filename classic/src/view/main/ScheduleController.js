@@ -5,6 +5,7 @@ Ext.define("nfufront1.view.main.ScheduleController", {
   config: {
     name: "Schedule Page",
   },
+
   scheduleBtnPress: function () {
     const me = this;
     try {
@@ -15,6 +16,16 @@ Ext.define("nfufront1.view.main.ScheduleController", {
       );
     } catch (e) {
       me.showError("ScheduleController/ scheduleBtnPress error:", e);
+    }
+  },
+  receiveDateSlt: function (dateSlt) {
+    const me = this;
+    try {
+      const label = Ext.getCmp("dateLabel");
+      label.setText("日期:" + dateSlt);
+      console.log("Here is receiveDateSlt");
+    } catch (e) {
+      me.showError("ScheduleController/ receiveDateSlt error:", e);
     }
   },
 });
